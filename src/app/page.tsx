@@ -1,88 +1,92 @@
-import Image from "next/image";
+import PageHeader from "./common/PageHeader";
+import { TextBlock } from './common/TextBlock';
+import { PageHeaderText } from "./common/PageHeaderText";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <PageHeader img={'bg/BE0A4513-opt.jpg'} height='h-80v' bgPosition="bg-[right_-12rem_top] md:bg-center">
+        <PageHeaderText header="Hello, World!">
+          <p className="text-2xl md:text-4xl text-zinc-200">I&apos;m Oleksiy Zelenyuk</p>
+          <p className="text-zinc-200 italic text-base md:text-lg">
+            Enthusiast, Enterpreneur, Adventurer
+          </p>
+        </PageHeaderText>
+      </PageHeader>
+      <TextBlock title="About me">
+        <div className='flex flex-row intro'>
+          <p className='px-2 py-10 text-xl'>
+            I&apos;m passionate about creating beautiful compositions, whether it&apos;s a piece of software, a photograph, or a portion of music.
+            I&apos;m a Software Architect with over 20 years of experience in the industry. I&apos;m also a keen photographer, but I have no talent in music, unfortunately :).
+            I love to travel and explore the world. I&apos;m a big fan of the outdoors and love hiking, driving off-road, and skiing.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </TextBlock>
+
+      <PageHeader img={'bg/BE0A5400-opt.jpg'}  navigation={false} height='md:h-60v'>
+        <PageHeaderText header="Capturing moments">
+          <p className="text-4xl text-zinc-200">
+
+          </p>
+        </PageHeaderText>
+      </PageHeader>
+      <TextBlock title="Photography">
+        <>
+            <p className="pb-4">
+              I&apos;ve been taking photos since I was a kid. I started with a film camera and then moved to digital. I&apos;ve been using Canon cameras for over 20 years now.
+            </p>
+            <p className="pb-4">
+              I love to take photos of landscapes, nature, people, and animals. I also enjoy taking pictures of my family and friends, who have been waiting for their pictures for ages :)
+            </p>
+            <p className="pb-4">
+              Capturing the moment, showing essential things, and telling a story, using focal length, focus, composition, and attention to detail are the key elements of a good photo, such as in a software architecture vision.
+            </p>
+        </>
+      </TextBlock>
+
+      <PageHeader img={'bg/BE0A4874-opt.jpg'} navigation={false} height='md:h-60v'>
+        <PageHeaderText header="Exploring terrains">
+          <p className="text-4xl text-zinc-200">
+
+          </p>
+        </PageHeaderText>
+      </PageHeader>
+      <TextBlock title='Offroading'>
+        <>
+          <p className="pb-4">
+            Unfortunately, I didn&apos;t have a chance to offroad when I was a teenager. I could only dream about a Jeep or at least Lada Niva.
+          </p>
+          <p className="pb-4">
+            I started offroading in 2019 when I bought my FJ Cruiser I&apos;m still driving and making more and more modifications.
+          </p>
+          <p className="pb-4">
+            Planning the route, preparing the vehicle, and overcoming the obstacles, using the right tools, estimating resources, and making a backup plan are the key elements of a successful offroad trip, such as in a software discovery.
+          </p>
+        </>
+      </TextBlock>
+      <PageHeader img={'bg/BE0A1590-opt.jpg'} navigation={false} height='md:h-60v'>
+        <PageHeaderText header="Crafting IT Solutions">
+          <p className="text-4xl text-zinc-200">
+
+          </p>
+        </PageHeaderText>
+      </PageHeader>
+      <TextBlock title='Software Engineering'>
+        <>
+          <p className="pb-4">
+            I started programming in school back in 1998, using C++ and Pascal. When I discovered web development, I was amazed by the cool things I could do with HTML and JavaScript. Then I realized I wanted to build the websites.
+          </p>
+          <p className="pb-4">
+            I mastered graphics editors of the Corel package and started building cool and animated 90-ish websites. I quickly realized that not everything I could do with JS at that time (NodeJS hadn&apos;t been invented yet), so I learned Perl and then moved to PHP, also learned how to deploy it to a hosting platform and promote it in Yahoo and Google.
+          </p>
+          <p className="pb-4">
+            It allowed me to start my small craft in the industry and build my own projects. So, in fact, I was a full-stack developer in the early 2000s before it became mainstream.
+          </p>
+          <p className="pb-4">
+            Now, after 20 years of experience in the industry, I&apos;m a Software Architect, and I&apos;m still passionate about building software. I love to learn new technologies and apply them to solve real-world problems.
+          </p>
+        </>
+      </TextBlock>
     </div>
   );
 }
